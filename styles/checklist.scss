@@ -4,15 +4,18 @@
 .checklist {
   @include flex-layout(flex-start, center, row, 1rem);
 
+  width: 46.438rem;
   padding: 0.75rem 1rem;
+
   color: $color-bg-white;
+
   background: $color-bg-blue-default;
   border-radius: $border-radius-s;
 
   &__details {
     @include flex(column, 4px);
 
-    min-width: 28rem;
+    flex: 1;
   }
 
   &__badge {
@@ -38,6 +41,7 @@
 
   &__progress-block {
     position: relative;
+    padding-left: 6px;
   }
 
   &__progress {
@@ -70,7 +74,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    display: block;
   }
 }

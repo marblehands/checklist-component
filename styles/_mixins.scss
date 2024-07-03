@@ -1,4 +1,15 @@
+@import './variables';
+
+// Flexbox mixins
 @mixin flex($gap: null) {
   display: flex;
   gap: $gap;
+}
+
+// Typography mixins
+@mixin text-style($size, $line-height, $weight) {
+  font-family: $base-font-family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
 }

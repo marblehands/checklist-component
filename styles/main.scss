@@ -5,3 +5,19 @@
 @import 'node_modules/normalize-scss/sass/normalize';
 
 @include normalize;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include flex(column);
+
+  height: 100dvh;
+}
+
+.main {
+  @include flex-layout;
+
+  flex: 1;
+}

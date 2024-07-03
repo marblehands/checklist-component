@@ -1,9 +1,17 @@
 @import './variables';
 
 // Flexbox mixins
-@mixin flex($gap: null) {
+@mixin flex($direction: row, $gap: null) {
   display: flex;
+  flex-direction: $direction;
   gap: $gap;
+}
+
+@mixin flex-layout($justify: center, $align: center, $direction: row, $gap: null) {
+  @include flex($direction, $gap);
+
+  align-items: $align;
+  justify-content: $justify;
 }
 
 // Typography mixins

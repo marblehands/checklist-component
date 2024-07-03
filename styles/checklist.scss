@@ -59,7 +59,7 @@
 
   &__progress-circle {
     $circumference: 2 * 3.1416 * 30;
-    $progress-percentage: 100 / 7;
+    $progress-percentage: calc(100 / 7);
 
     transform-origin: 50% 50%;
     transform: rotate(-90deg);
@@ -67,7 +67,7 @@
     fill: none;
     stroke: $color-border-white-default;
     stroke-dasharray: $circumference;
-    stroke-dashoffset: $circumference - ($circumference * $progress-percentage / 100);
+    stroke-dashoffset: $circumference - calc($circumference * $progress-percentage / 100);
     stroke-linecap: round;
     stroke-width: 2;
   }

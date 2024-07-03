@@ -7,7 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stworka Test Assignment – Anna Chebysheva – Checklist Component</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="body">
+    <header class="header"></header>
+    <main class="main">
+      <section class="checklist">
+        <div class="checklist__progress">
+          <span class="checklist__progress-text" aria-label="progress">0/7</span>
+        </div>
+        <div class="checklist__details">
+          <div class="checklist__badge">
+            <span class="checklist__badge-text">Чеклист</span>
+          </div>
+          <h3 class="checklist__status">
+            Выполнено: <span id="completed-tasks" aria-label="completed tasks">0</span> из
+            <span id="total-tasks" aria-label="total tasks">7</span>
+            действий
+          </h3>
+          <p class="checklist__next-action">Следующее действие: Созвониться с клиентом до 23.05.24 12:00</p>
+        </div>
+        <div class="checklist__action">
+          <button class="checklist__button" type="button" aria-label="Открыть чеклист">Открыть чеклист</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
   </body>
 </html>

@@ -35,4 +35,42 @@
   &__button {
     margin-right: 2px;
   }
+
+  &__progress-block {
+    position: relative;
+  }
+
+  &__progress {
+    display: block;
+  }
+
+  &__progress-circle-bg {
+    fill: none;
+    stroke: $color-border-white-50;
+    stroke-width: 1;
+  }
+
+  &__progress-circle {
+    $circumference: 2 * 3.1416 * 30;
+    $progress-percentage: 100 / 7;
+
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+
+    fill: none;
+    stroke: $color-border-white-default;
+    stroke-dasharray: $circumference;
+    stroke-dashoffset: $circumference - ($circumference * $progress-percentage / 100);
+    stroke-linecap: round;
+    stroke-width: 2;
+  }
+
+  &__progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+  }
 }

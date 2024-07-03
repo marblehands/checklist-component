@@ -16,5 +16,5 @@
 
 // Classes for headings - Semibold weight
 .heading-semibold-xxs {
-  @include text-style($font-size-heading-xxs, $line-height-heading-xxs, $font-weight-semibold);
+  @include heading-style($font-size-heading-xxs, $line-height-heading-xxs, $font-weight-semibold);
 }

@@ -14,12 +14,18 @@
   justify-content: $justify;
 }
 
-// Typography mixins
+// Typography
 @mixin text-style($size, $line-height, $weight) {
   font-family: $base-font-family;
   font-size: $size;
   font-weight: $weight;
   line-height: $line-height;
+}
+
+@mixin heading-style($size, $line-height, $weight) {
+  @include text-style($size, $line-height, $weight);
+
+  margin: 0;
 }
 
 @mixin button-default {
@@ -31,7 +37,7 @@
     color $transition-duration ease;
 }
 
-// Button primary
+// Buttons
 @mixin button-primary {
   @include button-default;
 

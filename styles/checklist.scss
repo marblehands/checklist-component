@@ -8,4 +8,31 @@
   color: $color-bg-white;
   background: $color-bg-blue-default;
   border-radius: $border-radius-s;
+
+  &__details {
+    @include flex(column, 4px);
+
+    min-width: 28rem;
+  }
+
+  &__badge {
+    width: fit-content;
+    padding: 0 0.84rem;
+    background-color: $color-bg-blue-badge;
+    border-radius: $border-radius-xl;
+  }
+
+  &__badge-text,
+  &__progress-text {
+    display: block;
+  }
+
+  &__next-action {
+    margin: 0;
+    margin-bottom: 3px;
+  }
+
+  &__button {
+    margin-right: 2px;
+  }
 }

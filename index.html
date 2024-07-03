@@ -12,18 +12,21 @@
     <main class="main">
       <section class="checklist">
         <div class="checklist__progress">
-          <span class="checklist__progress-text" aria-label="progress">0/7</span>
+          <span class="checklist__progress-text text-regular-xl" aria-label="progress">0/7</span>
         </div>
         <div class="checklist__details">
           <div class="checklist__badge">
-            <span class="checklist__badge-text">Чеклист</span>
+            <span class="checklist__badge-text text-regular-xs">Чеклист</span>
           </div>
-          <h3 class="checklist__status">
+          <h3 class="checklist__status heading-semibold-xxs">
             Выполнено: <span id="completed-tasks" aria-label="completed tasks">0</span> из
             <span id="total-tasks" aria-label="total tasks">7</span>
             действий
           </h3>
-          <p class="checklist__next-action">Следующее действие: Созвониться с клиентом до 23.05.24 12:00</p>
+          <p class="checklist__next-action text-regular-xs">
+            Следующее действие:
+            <span id="next-action" aria-label="next action">Созвониться с клиентом до 23.05.24 12:00</span>
+          </p>
         </div>
         <div class="checklist__action">
           <button class="checklist__button" type="button" aria-label="Открыть чеклист">Открыть чеклист</button>

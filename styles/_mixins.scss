@@ -21,3 +21,30 @@
   font-weight: $weight;
   line-height: $line-height;
 }
+
+@mixin button-default {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition:
+    background-color $transition-duration ease,
+    color $transition-duration ease;
+}
+
+// Button primary
+@mixin button-primary {
+  @include button-default;
+
+  max-width: 10.626rem;
+  padding: 0.625rem 1.585rem;
+
+  color: $color-text-button-default;
+
+  background-color: $color-bg-button-default;
+  border-radius: $border-radius-xs;
+
+  &:hover {
+    color: $color-text-button-default;
+    background-color: $color-bg-button-hover;
+  }
+}

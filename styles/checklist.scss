@@ -1,2 +1,11 @@
 @import './mixins';
 @import './variables';
+
+.checklist {
+  @include flex-layout(flex-start, center, row, 1rem);
+
+  padding: 0.75rem 1rem;
+  color: $color-bg-white;
+  background: $color-bg-blue-default;
+  border-radius: $border-radius-s;
+}

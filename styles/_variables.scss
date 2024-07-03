@@ -28,7 +28,17 @@ $font-weight-bold: 700;
 $color-bg-white: #fff;
 $color-bg-blue-default: #3579f5;
 $color-bg-blue-badge: #2364db;
+$color-bg-button-default: rgb(244 248 255);
+$color-bg-button-hover: #fff;
 $color-text-white: #fff;
-$color-text-blue: #4777ed;
+$color-text-button-default: #4777ed;
 $color-border-white-default: #fff;
 $color-border-white-50: rgb(255 255 255 / 50%);
+
+// Border radius
+$border-radius-xl: 40px;
+$border-radius-s: 10px;
+$border-radius-xs: 6px;
+
+// Transition
+$transition-duration: 0.3s;

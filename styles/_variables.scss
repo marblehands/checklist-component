@@ -1,0 +1,44 @@
+// Base typography
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-font-family: 'Inter', sans-serif;
+
+// Font Sizes for Body Text
+$font-size-body-xl: 20px;
+$font-size-body-s: 14px;
+$font-size-body-xs: 12px;
+
+// Line Heights for Body Text
+$line-height-body-xl: 30px;
+$line-height-body-s: 20px;
+$line-height-body-xs: 18px;
+
+// Font Sizes for Headings
+$font-size-heading-xxs: 15px;
+
+// Line Heights for Headings
+$line-height-heading-xxs: 20px;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Colors
+$color-bg-white: #fff;
+$color-bg-blue-default: #3579f5;
+$color-bg-blue-badge: #2364db;
+$color-bg-button-default: rgb(244 248 255);
+$color-bg-button-hover: #fff;
+$color-text-white: #fff;
+$color-text-button-default: #4777ed;
+$color-border-white-default: #fff;
+$color-border-white-50: rgb(255 255 255 / 50%);
+
+// Border radius
+$border-radius-xl: 40px;
+$border-radius-s: 10px;
+$border-radius-xs: 6px;
+
+// Transition
+$transition-duration: 0.3s;

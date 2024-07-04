@@ -1,0 +1,53 @@
+@import './variables';
+
+// Flexbox mixins
+@mixin flex($direction: row, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin flex-layout($justify: center, $align: center, $direction: row, $gap: null) {
+  @include flex($direction, $gap);
+
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Typography
+@mixin text-style($size, $line-height, $weight) {
+  font-family: $base-font-family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin heading-style($size, $line-height, $weight) {
+  @include text-style($size, $line-height, $weight);
+
+  margin: 0;
+}
+
+@mixin button-default {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition:
+    background-color $transition-duration ease,
+    color $transition-duration ease;
+}
+
+// Buttons
+@mixin button-primary {
+  @include button-default;
+
+  padding: 0.625rem 1.585rem;
+  color: $color-text-button-default;
+  background-color: $color-bg-button-default;
+  border-radius: $border-radius-xs;
+
+  &:hover {
+    color: $color-text-button-default;
+    background-color: $color-bg-button-hover;
+  }
+}

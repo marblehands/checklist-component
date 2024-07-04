@@ -1,0 +1,90 @@
+@import './mixins';
+@import './variables';
+
+.checklist {
+  @include flex-layout(flex-start, center, row, 1rem);
+
+  flex-wrap: wrap;
+
+  width: 46.438rem;
+  padding: 0.75rem 1rem;
+
+  color: $color-bg-white;
+
+  background: $color-bg-blue-default;
+  border-radius: $border-radius-s;
+
+  &__details {
+    @include flex(column, 4px);
+
+    flex: 1;
+  }
+
+  &__badge {
+    width: fit-content;
+    padding: 0 0.84rem;
+    background-color: $color-bg-blue-badge;
+    border-radius: $border-radius-xl;
+  }
+
+  &__badge-text,
+  &__progress-text {
+    display: block;
+  }
+
+  &__next-action {
+    margin: 0;
+    margin-bottom: 3px;
+  }
+
+  &__button {
+    max-width: 10.626rem;
+    margin-right: 2px;
+  }
+
+  &__progress-block {
+    position: relative;
+    margin-left: 6px;
+  }
+
+  &__progress {
+    display: block;
+  }
+
+  &__progress-circle-bg {
+    fill: none;
+    stroke: $color-border-white-50;
+    stroke-width: 1;
+  }
+
+  &__progress-circle {
+    $circumference: 2 * 3.1416 * 30;
+    $progress-percentage: calc(100 / 7);
+
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+
+    fill: none;
+    stroke: $color-border-white-default;
+    stroke-dasharray: $circumference;
+    stroke-dashoffset: $circumference - calc($circumference * $progress-percentage / 100);
+    stroke-linecap: round;
+    stroke-width: 2;
+  }
+
+  &__progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (width <= 540px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__progress-block {
+      margin: 0;
+    }
+  }
+}
